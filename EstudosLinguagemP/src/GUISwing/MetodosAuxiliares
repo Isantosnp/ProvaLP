@@ -1,0 +1,42 @@
+Component: Classe abstrata base de todas as classes AWT que podem ser mostradas ao usuário;
+Container: subclasse abstrata de Component e base para as classes que comportam outros componentes;
+Panel: herda a classe Container e corresponde a uma área que pode ser inserida em um Frame;
+Frame: Representa uma janela completa, com título, bordas, menu e cantos que podem redimensioná-la.
+
+• JLabel - Exibe texto não editável ou ícones.
+• JTextField – Insere dados do teclado e serve também para exibição do texto
+editável ou não editável.
+• JButton – Libera um evento quando o usuário clicar nele com o mouse.
+• JCheckBox – Especifica uma opção que pode ser ou não selecionada.
+• JComboBox – Fornece uma lista de itens onde possibilita o usuário selecionar um
+item ou digitar para procurar.
+• JList – Lista de itens onde pode ser selecionado vários itens.
+• JPanel – É a área onde abriga e organiza os componentes inseridos.
+
+
+
+Metodos auxiliares:
+
+- painel.add(botao);
+   nome do objeto do frame.add( nome do objeto que será adicionado no frame);
+
+- janela.getContentPane( ).add(painel)
+            O getcContentPane();  um método que obtém as características de um painel e o add acrescenta um componente no objeto;
+            objetodoJframe.getContentPane().add(objeto do JPanel);
+
+-mascaraTel.setPlaceholderCharacter('_');
+            O método setPlaceholderCharacter('_'); é um valor temporário ou genérico que é usado para representar algo que será preenchido posteriormente com um valor real.
+
+
+
+getTitle: obtém o título da janela;
+setTitle(String): define o título da janela;
+SisResizable: verifica se a janela é ou não dimensionável;
+setResizable(boolean): define se a janela é dimensionável ou não;
+setIconeImage(Image): define ícone quando minimizado;
+setSize(int, int): define o tamanho da janela;
+setLocation(int, int): posiciona a janela no monitor;
+setVisible(boolean): define se a janela é visível ou não;
+setBounds(int, int, int, int): posiciona e dimensiona a janela;
+show: método da classe Window que é herdado pela JFrame para apresentação da janela na aplicação (método deprecated).
+

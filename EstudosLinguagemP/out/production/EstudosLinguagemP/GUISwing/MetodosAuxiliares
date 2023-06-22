@@ -1,0 +1,27 @@
+• JLabel - Exibe texto não editável ou ícones.
+• JTextField – Insere dados do teclado e serve também para exibição do texto
+editável ou não editável.
+• JButton – Libera um evento quando o usuário clicar nele com o mouse.
+• JCheckBox – Especifica uma opção que pode ser ou não selecionada.
+• JComboBox – Fornece uma lista de itens onde possibilita o usuário selecionar um
+item ou digitar para procurar.
+• JList – Lista de itens onde pode ser selecionado vários itens.
+• JPanel – É a área onde abriga e organiza os componentes inseridos.
+
+
+
+Metodos auxiliares:
+
+- painel.add(botao);
+   nome do objeto do frame.add( nome do objeto que será adicionado no frame);
+
+- janela.getContentPane( ).add(painel)
+            O getcContentPane(); O campo do Jframe para ser preenchido é preciso criar um JPanel, o metodo getContentPane é o que pega o Jpanel, sem ele não é possível adicionar nada na tela.
+            e referencia no Jframe, para adiciona-lo é necessário  colocar o metodo add(coloca o objeto de Jpanel aqui);
+
+            objetodoJframe.getContentPane().add(objeto do JPanel);
+
+-mascaraTel.setPlaceholderCharacter('_');
+            O método setPlaceholderCharacter('_'); é um valor temporário ou genérico que é usado para representar algo que será preenchido posteriormente com um valor real.
+
+

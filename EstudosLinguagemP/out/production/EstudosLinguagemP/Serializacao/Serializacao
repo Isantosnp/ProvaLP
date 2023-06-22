@@ -1,0 +1,26 @@
+Fluxos de dados (streams)
+
+                                     FILE
+Input ( entrada)
+FileInputStream : é uma classe abstrata que contém os métodos básicos para leitura de bytes de dados de um stream( fluxo) de um arquivo.
+arquivo em disco.
+FilterInputStream:
+DataInputStream:
+
+Output(saída)
+FileOutputStream:  é um fluxo de arquivo que permite a gravação em disco
+
+                     READER (leitor)
+
+                     É uma classe abstrata sendo igual à InputStream,é voltada para a manipulação de
+                     caracteres.Nessa classe não é possível criar objetos diretos dela.Para criar
+                     objetos é necessário instanciar uma das subclasses.
+
+BufferedReader: ê o texto de um fluxo de entrada de caracteres, arm
+InputStreamReader:
+FileReader:
+
+                    WRITER(escritor)
+OutputStreamWriter:
+FileWriter:
+PrintWrinter:

@@ -1,0 +1,18 @@
+CLASSES DE TRATAMENTO:
+Throwable: classe base de todas as exceções.
+Fornece os métodos:
+getMessage(): retorna mensagem do erro
+printStackTrace(): retorna a pilha de métodos chamados
+toString() : retorna uma string com a descrição da descrição
+ Exception:
+Subclasse de Thworable;
+Por convenção, todas as classes de exceção são subclasses de Exception
+
+
+Try :
+Catch:
+throw:você próprio envie uma exceção em alguma situação especifica, como em uma situação de login em que o usuário digita
+      incorretamente sua senha
+      EX: throw new Exception ("MENSAGEM DA EXCEÇÃO AQUI");
+throws:
+Finally: representa um trecho de código que será  sempre executado,independentemente se uma exceção ocorrer.

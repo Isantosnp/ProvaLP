@@ -1,0 +1,31 @@
+Roteiro de criação
+1) Instanciar os componentes de interface do usuário janelas, botões, campos de textos, etc.
+2) Adicionar os componentes em containers como os componentes podem ser
+agrupados.
+3) Estabelecer o tratamento de eventos de interface.
+=> O que deve ocorrer quando o usuário clicar um botão?
+=> Como alterar o conteúdo de um componente quando um outro sofre
+alguma alteração?
+
+ Quando ocorre uma ação (ActionEvent);
+ Clique do mouse (MouseEvent);
+ Apertar em uma tecla (KeyEvent);
+ Fechar uma janela (WindowEvent);
+
+LISTENER
+Quando existe a intenção de um usuário sobre algum botão.
+
+A interface ActionListener e usado o método addActionListener() sendo passado como parâmetro a palavra “this”, é a referência do objeto da classe que implementa a
+interface ActionListener, neste caso ela mesma.
+
+Para fazermos um tratador de eventos precisamos de três ações básicas:
+
+
+1) Criar uma classe que implemente uma interface de ActionListener:
+          public class CapturaEvento implements ActionListener {
+2) Executar um código que registre uma instância desta classes como
+um listener de um ou mais componentes:
+          botao.addActionListener(this);
+
+ 3) Definir o método de manipulação de eventos interface ActionListener:
+          public void actionPerformed(ActionEvent evento) {

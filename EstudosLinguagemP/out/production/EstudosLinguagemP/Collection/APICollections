@@ -1,0 +1,20 @@
+A API de Collections traz são listas.
+ Uma lista é uma coleção que permite elementos duplicados e mantém uma ordenação específica entre os elementos,
+ você tem a garantia de que, quando percorrer a lista,  os elementos serão encontrados em uma ordem pré-determinada,
+ definida hora da inserção dos mesmos, ela não terá um valor definido.
+
+- ArrayList é mais rápida na pesquisa do que sua concorrente.
+- LinkedList é mais rápida na inserção e remoção de itens nas
+pontas
+
+
+Para criar um ArrayList, basta chamar o construtor:
+       ArrayList lista = new ArrayList();
+ É sempre possível abstrair a lista a partir da interface List:
+      List lista = new ArrayList();
+
+      Metodos:
+   - add.(0); (Adicionar algo na lista, seguindo a ordem em que foi inserido)
+   - add(2, "Ana); ( redimenciona a lista e coloca a "Ana" na posição 2 conforme solicitado.
+   - size() ( para saber quantos elementos há na lista)
+

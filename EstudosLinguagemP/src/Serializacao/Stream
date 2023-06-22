@@ -1,0 +1,84 @@
+O que são Streams?
+
+
+O Java trata a entrada e saída como fluxos de dados (os tão chamados Streams), e, além disso, a abstração criada pela
+linguagem sobre os Streams é tão grande, que muitas vezes você está puxando/escrevendo dados em algum Stream, e você
+não sabe se eles estão vindo da internet, de um arquivo texto, ou do usuário que está digitando no console.
+
+>>>>>Um stream é uma sequência ordenada de dados com uma fonte e um destino.<<<<<<<
+
+Java enxerga um arquivo como sendo um fluxo sequencial de bytes. Cada arquivo termina com um marcador de fim de arquivo ou
+em um número específico de bytes registrado em uma estrutura administrativa do arquivo mantida pelo sistema (descritor do
+arquivo). Quando um arquivo é aberto, um objeto é criado e um fluxo é associado com o objeto. Três objetos de fluxo são criados
+automaticamente quando se inicia a execução de um programa Java:
+
+
+System.in (objeto de fluxo de entrada padrão) permite que um programa insira bytes via teclado;
+System.out (objeto de fluxo de entrada) permite a um programa dar saída a dados na tela;
+System.err (objeto de fluxo de erro) permite a saída de mensagens de erros na tela.
+
+Classe File
+
+Usada para representar o sistema de arquivos, é apenas uma abstração - a existência de um objeto File não significa a existência de
+um arquivo ou diretório.
+
+
+Contém métodos para testar a existência de arquivos, para definir permissões (nos S.O.s onde for aplicável), para apagar arquivos,
+criar diretórios, listar o conteúdo de diretórios, etc.
+
+
+Alguns exemplos de métodos:
+
+
+public String getParent();         // retorna o diretório (objeto File) pai
+public list();        // retorna lista de arquivos contidos no diretório byte
+public boolean isFile();       // retorna se é um arquivo
+public boolean isDirectory();        // retorna se é um diretório long
+public boolean delete();        // tenta apagar o diretório ou arquivo byte
+public long length();       // retorna o tamanho do arquivo em bytes
+public boolean mkdir();       // cria um diretório com o nome do arquivo
+public String getAbsolutePath();        // retorna o caminho absoluto (path)
+
+
+ara processamento de arquivos em Java, o pacote java.io deve ser importado. As classes InputStream e OutputStream (ambas derivadas
+ de Object e definida como abstract) são as classes fundamentais que definem métodos para realização de entrada e saída de BYTES
+ respectivamente.
+
+
+A classe InputStream
+
+InputStream é uma classe abstrata que contém os métodos básicos para leitura de bytes de dados de um stream. Embora InputStream
+seja uma classe abstract muitos dos seus métodos somente especificam o retorno de InputStream, dessa forma trabalha-se diretamente
+com eles.
+
+
+OutputStream envia uma série de bytes de dados para um alvo tal como o console ou para um network server.
+Tal como InputStream, OutputStream é uma classe abstrata porém com métodos originalmente úteis, como os exemplos a seguir.
+
+
+O método write() envia filas de bytes de dados para quem estiver "ouvindo" o fluxo. Muitas vezes os outputStreams são buffered
+ para melhorar a performance, ou seja, ao invés de escrever byte a byte, eles são acumulados em um buffer de tamanho que varia de
+  alguns a um monte de bytes. Então, quando o buffer se torna cheio, todos os dados são escritos de uma única vez.
+
+
+O método flush() força que o dado seja escrito mesmo que o buffer não esteja ainda cheio. Observar que não se trata de bufferização
+ realizada por um objeto BufferedOutputStream. Aquela bufferização é manipulada por Java runtime. Esta bufferização é a nível de SO
+ nativo. De qualquer maneira, a chamada de um método flush() deverá esvaziar ambos os buffers.
+
+
+O método close() fecha o stream e libera qualquer recurso associado com ele. A tentativa de escrever ou ler um stream fechado lança
+ um IOException.
+
+
+ ClassRandomAccessFile
+
+ Construindo uma instância do RandomAccessFile, você pode procurar por qualquer posição desejada dentro de um arquivo, e então ler
+  ou escrever um montante de dados desejados.
+
+
+ Construindo uma instância do RandomAccessFile no modo "r", se o arquivo não existir dispara uma exceção "FileNotFoundException".
+  Construindo uma instância do RandomAccessFile no modo 'rw', se o arquivo não existir um arquivo de tamanho zero é criado.
+
+
+ Exemplo Class RandomAccessFile - leitura:
+
